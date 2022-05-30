@@ -1,0 +1,82 @@
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+
+
+.paint {
+  /* --customValue: 30; */
+  --static-gradient-color: orange;
+  background: paint(testPaint);
+  background-repeat: no-repeat;
+  font-size: 20px;
+  padding: 1em;
+
+  transition: --static-gradient-color 0.1s, transform 0.1s;
+
+  
+}
+
+.paint:hover {
+  --static-gradient-color: hotpink;
+}
+
+
+
+/* from https://codepen.io/bigandy/pen/ExQoeNM?editors=0100 */
+.noise {
+  /*
+  Optionally set property values.
+  This can be done at root or local scope
+  */
+  --noise-cell-size: 5;
+  --noise-hue: 180 280;
+  --noise-saturation: 20 80;
+  --noise-lightness: 10 50;
+  background: paint(noise);
+}
+
+.noise {
+    --lightness: 50;
+    --spread: 10;
+    border: 0;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: sans-serif;
+    cursor: pointer;
+    color: hsl(0, 0%, 100%);
+    outline: transparent;
+    box-shadow: 0 0px calc(var(--spread) * 1px) 0 hsl(0, 0%, calc(var(--lightness) * 1%));
+    transition: box-shadow 0.1s, transform 0.1s;
+}
+
+.noise:hover {
+  --lightness: 10;
+}
+
+// Andrew-1
+
+.andrew-1 {
+  background: red;
+  height: 100px;
+  width: 100%;
+  display: grid;
+  place-content: center;
+  border: 1px solid;
+  margin-top: 3em;
+
+  --direction: 0;
+  background: paint(andrew-1);
+
+  transition: --direction 0.1s;
+
+  &:hover {
+    --direction: 1;
+  }
+}

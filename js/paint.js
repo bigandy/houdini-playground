@@ -1,5 +1,3 @@
-console.log("i am paint!");
-
 class PaintClass {
     static get inputProperties() {
       return [
